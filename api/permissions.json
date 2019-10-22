@@ -1,0 +1,14 @@
+//Schema:
+// appId: {
+//    name: "CreditMonkey",
+//    endpoints: [endpoint1, endpoint2, endpoint3]
+// }
+{
+  "1": {
+    "name": "CreditMonkey",
+    "endpoints": {
+      "endpointId": 1,
+      "description": "Credit Monkey requires the ability to get the balance of your bank accounts."
+    }
+  }
+}

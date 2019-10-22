@@ -1,0 +1,8 @@
+// Schema
+// endpointID: { endpoint: STRING, description: STRING}
+{
+  "1": {
+    "url": "/obp/v4.0.0/banks/BANK_ID/balances",
+    "description": "Get the Balances for the Accounts of the current User at one bank."
+  }
+}

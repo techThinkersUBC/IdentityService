@@ -2,7 +2,12 @@ import jwt from 'jsonwebtoken';
 
 export const getToken = (req, res) => {
     const secret = process.env.SECRET;
-    const token = jwt.sign({ id: '1', email: 'jeffreydoylec@gmail.com', type: 'admin' }, secret, { expiresIn: '24h' });
+    const {
+        appId,
+    } = req.body;
+
+    const token = jwt.sign({ appId, email: 'jeffreydoylec@gmail.com' }, secret, { expiresIn: '24h' });
+
     res.send({ jwt: token });
     res.end();
 };
