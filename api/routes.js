@@ -9,7 +9,7 @@ const api = expressRouter.Router();
 api.post('/auth/getToken', AuthController.getToken);
 api.post('/auth/validateToken', AuthController.validateToken);
 
-api.get('/endpoints/:appId', AuthController.validateToken, EndpointsController.getEndpoints);
-api.get('/permissions/:appId', AuthController.validateToken, PermissionsController.getPermissions);
+api.get('/endpoints/:appId', validateToken, EndpointsController.getEndpoints);
+api.get('/permissions/:appId', validateToken, PermissionsController.getPermissions);
 
 export default api;
