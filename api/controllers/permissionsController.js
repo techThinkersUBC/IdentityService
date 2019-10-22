@@ -12,13 +12,18 @@ export const getPermissions = ((req, res) => {
     if (!appId) return reject();
 
     const perms = permissions[appId];
-    if (!permissions) return reject();
+    if (!perms) return reject();
 
-    const permissions = [];
+    const endpointsToReturn = [];
     perms.endpoints.forEach((e) => {
-        endpointsToReturn.push(endpoints[e]);
+        const endpoint = endpoints[e.endpointId];
+        endpointsToReturn.push({
+            url: endpoint.url,
+            endpointDescription: endpoint.description,
+            permissionDescription: e.description,
+        });
     });
 
-    res.send({ endpoints });
+    res.send({ name: perms.name, endpoints: endpointsToReturn });
     res.end();
 });

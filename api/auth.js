@@ -1,3 +1,5 @@
+import jwt from 'jsonwebtoken';
+
 /**
  * Validates the jwt in the request header is valid.
  *
