@@ -1,6 +1,7 @@
 {
   "1": {
     "name": "Credit Monkey",
+    "callbackUrl": "http://localhost:2000/auth/callback",
     "endpoints": [{
       "endpointId": 1,
       "description": "Credit Monkey requires the ability to get the balance of your bank accounts."

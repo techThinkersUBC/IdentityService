@@ -22,6 +22,7 @@ export const validateToken = (req, res) => {
             return;
         }
         res.status(200);
+        res.send(decoded);
         res.end();
         return;
     });
